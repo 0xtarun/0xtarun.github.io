@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+    <h1>Rock(r) Paper(p) Scissors(s)?</h1>
+    <py-script>
+        import random
+
+def gameWin(comp,you):
+    if comp == you:
+        return None
+    elif comp =='r':
+        if you =='s':
+            return False
+        elif you =='p':
+            return True
+    elif comp =='s':
+        if you =='r':
+            return True
+        elif you =='p':
+            return False
+    elif comp =='p':
+        if you =='r':
+            return False
+        elif you =='s':
+            return True                
+randNo = random.randint(1,3)
+if randNo == 1:
+    comp = 'r'
+elif randNo ==2:
+    comp = 'p'
+elif randNo ==3:
+    comp = 's'
+you = input(":")
+you = you.lower()
+
+a = gameWin(comp,you)
+print(f"Computer chose :{comp}")
+print(f"You chose:{you}")
+if a == None:
+    print("The game is tie!")
+elif a ==True:
+    print("You win!")
+else:
+    print("You lose!")
+
+
+
+    </py-script>
+</body>
+</html>
