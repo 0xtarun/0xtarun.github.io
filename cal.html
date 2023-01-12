@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>okakx</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        
+    </py-env>
+</head>
+
+<body style="background-color:#100101">
+   
+    <center>
+        <img src="https://img.wallpapersafari.com/desktop/1920/1080/79/52/OTN8fY.jpg" , height=5, widght=5>
+    </center>
+    <center>
+        <font size="5" color="lightgreen">OKAKX</font>
+    </center>
+    <center>
+        <p> </p>
+        <p style="color:#33ff33">Just For Fun</p>
+    </center>
+
+    <py-script style="color:#33ff33">
+        a = {"Name" : "Tarun Anand",
+        "Age" : "18",
+        "Languages" : ["Python","c","Javascript"]}
+        print(a)
+    </py-script>
+    <py-script style="color:#33ff33">
+from pyodide.http import pyfetch
+import asyncio
+
+code = input(str("enter country calling code: "))
+code = int(code)
+
+response = await pyfetch(url=f"https://restcountries.com/v2/callingcode/{code}", method="GET")
+
+output = f"GET request=> status:{response.status}, json:{await response.json()}"
+
+pyscript.write('request_output', output)
+    </py-script>
+    <div id="request_output" , style="color:#33ff33"></div>
+</body>
+
+</html>
