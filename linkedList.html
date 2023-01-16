@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linked List Notes</title>
+    <style>
+      body {
+        background-color : black;
+        color : light green;
+      }
+    </style>
+  </head>
+  <body>
+    <p># LINKED List
+
+A linked list is a data structure that consists of a sequence of elements called nodes, where each node contains an element and a reference (or pointer) to the next node in the list. The first node is called the head and the last node is called the tail.
+
+There are two main types of linked list:
+
+- Singly linked list: where each node only has a reference to the next node in the list.
+- Doubly linked list: where each node has a reference to both the next and previous nodes in the list.
+
+Linked lists can be useful when you need a data structure that can grow or shrink dynamically, as opposed to an array which has a fixed size.
+
+The basic operations that can be performed on a linked list are:
+
+- Insertion: which adds a new node to the list
+- Deletion: which removes a node from the list
+- Search: which finds a specific node in the list
+- Traversal: which visits each node in the list
+
+Some other operations that can be performed on a linked list are:
+
+- Finding the length of the list
+- Reversing the list
+- Sorting the list
+
+Linked lists are often used in situations where the size of the data set is not known in advance or when the data needs to be inserted or removed frequently.
+
+In most programming languages, Linked list can be used by importing a library or a module.
+
+## Introduction to the list of stack
+
+A list of stack is a data structure that combines the properties of a list and a stack. It is a collection of stacks, where each stack is implemented as a list. The basic idea is to have a list of elements, where each element is a stack.
+
+The operations that can be performed on a list of stack are:
+
+- Push(element, index): which adds an element to the stack at the specified index
+- Pop(index): which removes and returns the top element from the stack at the specified index
+- Peek(index): which returns the top element of the stack at the specified index without removing it
+- Is_empty(index): which checks whether the stack at the specified index is empty or not
+- Size(index): which returns the number of elements in the stack at the specified index
+
+A list of stacks can be useful in situations where you need to store a large amount of data in a structured way, such as in a web browser where each tab is a stack of web pages.
+
+It's worth mentioning that the implementation of a list of stacks may vary depending on the use case, for example, you may use a linked list or an array to implement the list of stacks.
+
+## The Linked List of Queue
+
+A linked list of queues is a data structure that combines the properties of a linked list and a queue. It is a collection of queues, where each queue is implemented as a linked list. The basic idea is to have a linked list of elements, where each element is a queue.
+
+The operations that can be performed on a linked list of queues are:
+
+- Enqueue(element, index): which adds an element to the queue at the specified index
+- Dequeue(index): which removes and returns the front element from the queue at the specified index
+- Peek(index): which returns the front element of the queue at the specified index without removing it
+- Is_empty(index): which checks whether the queue at the specified index is empty or not
+- Size(index): which returns the number of elements in the queue at the specified index
+
+A linked list of queues can be useful in situations where you need to store and manage multiple queues of data, such as in a computer network where each queue represents a buffer for a different network device.
+
+It's worth mentioning that the implementation of a linked list of queues may vary depending on the use case, for example, you may use an array or a singly linked list to implement the linked list of queues.
+
+## Header nodes
+
+A header node is a special node that is often added to the beginning of a linked list. It typically does not contain any data, but it serves as a reference point for the rest of the list. The purpose of a header node is to simplify the implementation of certain operations on the linked list, such as insertion and deletion.
+
+For example, when inserting a new node into the list, the header node allows the algorithm to treat the first node in the list as a special case, rather than having to check for the edge case where the list is empty. Similarly, when deleting a node from the list, the header node allows the algorithm to treat the first node in the list as a special case, rather than having to check for the edge case where the node to be deleted is the first node.
+
+In short, header nodes are used to simplify the implementation of linked list operations, by allowing the algorithms to treat the first node in the list as a special case.
+
+## Doubly linked list
+
+- A doubly linked list is a variation of the standard linked list data structure.
+- Each node in a doubly linked list has two pointers, one pointing to the next node and another pointing to the previous node.
+- This allows for efficient traversal in both directions (for example, moving forward and backward through a list of items).
+- Because each node has two pointers, doubly linked lists use more memory than singly linked lists.
+- Insertion and deletion operations in a doubly linked list are generally more complex than in a singly linked list, because they involve updating both the next and previous pointers of surrounding nodes.
+- Some common operations that can be performed on a doubly linked list are inserting a new node, deleting a node, traversing the list forward and backward, finding the length of the list, and reversing the list.
+- One of the main advantages of doubly linked list is that it can be used in the implementation of various abstract data types such as stacks, queues and dequeues (Double Ended Queue)
+- It can also be used in the implementation of LRU (Least Recently Used) caching algorithm.
+
+## Circular linked list
+
+- A circular linked list is a variation of the standard linked list data structure, where the last node points back to the first node.
+- Each node in a circular linked list has a pointer to the next node in the list, and the last node's pointer points back to the first node.
+- This creates a circular structure, where there is no clear beginning or end to the list.
+- Because the last node's pointer points back to the first node, traversing a circular linked list does not have a natural stopping point, so it is important to keep track of the current node to avoid getting stuck in an infinite loop.
+- Insertion and deletion operations in a circular linked list are similar to those in a standard linked list, but with some additional considerations for the circular structure.
+- Some common operations that can be performed on a circular linked list are inserting a new node, deleting a node, traversing the list, finding the length of the list, and reversing the list.
+- One of the main advantages of circular linked list is that it can be used in the implementation of various abstract data types such as circular queue and circular buffer.
+- It can also be used to implement algorithms that need to rotate elements in a list.
+- It could be used in the implementation of various algorithms like Josephus problem.
+
+## Stack and Queue as a circular linked list
+
+- A stack is a last-in, first-out (LIFO) data structure and a queue is a first-in, first-out (FIFO) data structure.
+- Both a stack and a queue can be implemented using a circular linked list.
+- Implementing a stack as a circular linked list can be done by keeping a pointer to the top element of the stack.
+- Each time an element is pushed onto the stack, it is added to the list and the pointer is updated to point to the new top element.
+- Similarly, when an element is popped off the stack, the pointer is updated to point to the new top element.
+- Implementing a queue as a circular linked list can be done by keeping two pointers, one for the front of the queue and one for the rear of the queue.
+- Each time an element is enqueued, it is added to the list and the rear pointer is updated to point to the new rear element.
+- When an element is dequeued, the front pointer is updated to point to the next element in the list.
+- One of the advantages of implementing stack and queue as a circular linked list is that it can save space by reusing the memory that is freed when an element is dequeued or popped.
+- If implemented as circular linked list, it can be useful to solve various problems like "Hot Potato Game"
+
+## Application of Linked List
+
+- Linked lists are used in a variety of applications, such as computer programs, databases, and operating systems.
+- One of the main advantages of linked lists is that they can be easily resized, which is useful for applications that need to grow or shrink dynamically.
+- Linked lists can also be used to implement data structures such as stacks, queues, and associative arrays.
+- Linked lists can be used to implement dynamic memory allocation, where blocks of memory are allocated and deallocated as needed.
+- In Graph algorithms linked list can be used to implement adjacency list representation of graph.
+- Linked lists can be used in the implementation of hash tables, which are used for fast data lookup and insertion.
+- Linked lists are also used in the implementation of certain algorithms, such as the LRU (Least Recently Used) caching algorithm, which is used to improve the performance of web browsers and other applications.
+- In the field of Networking, Linked list can be used in the implementation of routing tables and in the implementation of packet switching algorithms.
+- Linked list can be used in the implementation of spell checker and auto-complete feature in the text editor and search engines.
+- In the field of Game Development, Linked list can be used in the implementation of the physics engine and in the management of game objects.</p>
+  </body>
+</html>
