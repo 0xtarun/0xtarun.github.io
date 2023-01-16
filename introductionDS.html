@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to DATA STRUCTURE</title>
+    <style>
+      body {
+        background-color: black;
+        color : lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <pre style="color:#33ff33"> # Introduction to data structure
+
+A data structure is a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. Some common examples of data structures include arrays, linked lists, stacks, queues, trees, and graphs. Each data structure has its own strengths and weaknesses, and choosing the right one for a particular problem can be crucial for the performance and efficiency of an algorithm.
+
+## Concept of data structure
+
+A data structure is a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. The concept of data structure is closely related to the concept of an algorithm, which is a step-by-step procedure for solving a problem. Data structures provide a way to organize data in a way that makes it easy for an algorithm to access and manipulate that data. Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks.
+
+Examples of data structures are:
+
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
+- Trees
+- Graphs
+
+Choosing the right data structure for a particular problem can be crucial for the performance and efficiency of an algorithm. Different data structures have different time and space complexity, so it's important to choose the data structure that is most efficient for the task at hand.
+
+## Abstract data structure
+
+An abstract data structure is a theoretical model of a data structure that defines the behavior of a data structure without specifying the implementation details. It describes a set of operations that can be performed on the data structure, along with the mathematical properties and constraints that those operations must satisfy.
+
+Examples of abstract data structures are:
+
+- Lists
+- Sets
+- Maps/Dictionaries
+- Queues
+- Stacks
+- Trees
+- Graphs
+
+An abstract data structure defines the interface of a data structure, which includes the operations that can be performed on the data and the behavior of those operations. This allows for different concrete implementations of the same abstract data structure, each with its own trade-offs in terms of time and space complexity.
+
+For example, the abstract data structure of a queue can be implemented using an array, or using a linked list. Both implementations will have the same behavior from the user's perspective but will have different performance and memory characteristics.
+
+## Analysis of Algorithm
+
+The analysis of an algorithm refers to the process of determining the computational complexity of an algorithm, which describes the amount of resources (such as time and space) required to solve a problem. This can help to determine the efficiency of an algorithm and identify potential bottlenecks in the performance.
+
+There are two main ways to analyze the performance of an algorithm:
+
+- Time Complexity: It describes the amount of time required to run an algorithm as a function of the size of the input. It is commonly expressed using big O notation, which describes the upper bound of the running time.
+- Space Complexity: It describes the amount of memory required by an algorithm as a function of the size of the input. It is also commonly expressed using big O notation.
+
+When analyzing algorithms, it is common to consider the worst-case, best-case, and average-case scenarios.
+
+For example, a sorting algorithm that takes n^2 time to sort n elements in the worst case, but only n log n time in the average case, would be considered to have a time complexity of O(n^2) in the worst case and O(n log n) in the average case.
+
+It's important to note that analyzing an algorithm can be complex, and it's often require mathematical skills and a deep understanding of algorithm design and complexity theory.
+
+## The Concept of List
+
+A list is a linear collection of elements, where each element is assigned a position or index. The elements in a list can be of any type, such as integers, strings, or objects. Lists are a fundamental data structure in computer science and are used in a wide range of applications.
+
+In computer science, lists are typically implemented as an array or a linked list.
+
+- An array is a fixed-size list, where elements are stored in contiguous memory locations.
+- A linked list is a dynamic list, where elements are stored in non-contiguous memory locations and linked together using pointers.
+
+Both array and linked lists have their own advantages and disadvantages, depending on the use case.
+
+Lists support a variety of operations such as:
+
+- Insertion of an element
+- Deletion of an element
+- Searching for an element
+- Sorting the elements
+- Traversing through the elements
+
+An Abstract data structure, List, is a collection of elements with a linear order. It defines the operations that can be performed on the data structure, and the mathematical properties and constraints that those operations must satisfy.
+
+Examples of abstract data structure list:
+
+- Singly linked list
+- Doubly linked list
+- Array list
+- Stack
+- Queue
+
+In most programming languages, Lists are implemented as an array or a linked list and can be used by importing a library or a module.
+
+## Stack and Queues
+
+A stack and a queue are both linear data structures, but they have different access principles.
+
+A stack is a Last In First Out (LIFO) data structure, where elements are added and removed from the same end, called the top of the stack.
+
+- The operation of adding an element to the stack is called "push".
+- The operation of removing an element from the stack is called "pop".
+
+A queue is a First In First Out (FIFO) data structure, where elements are added at one end, called the rear of the queue, and removed from the other end, called the front of the queue.
+
+- The operation of adding an element to the queue is called "enqueue".
+- The operation of removing an element from the queue is called "dequeue".
+
+Both stack and queue can be implemented using an array or a linked list. Stacks are often used in computer science and programming, for example, in parsing, expression evaluation, and memory management. Queues are used in scheduling and resource management, such as in CPU scheduling, disk scheduling, and managing communications between devices.
+
+In addition to the basic operations, both data structures may have additional functionalities, for example, returning the top element of the stack without removing it (peek operation), or checking if the queue is empty or not.
+
+In most programming languages, Stack and Queue can be used by importing a library or a module.
+
+## Introduction to stacks primitive operation on stack
+
+A stack is a linear data structure that follows the Last In First Out (LIFO) principle. In other words, the last element added to the stack is the first one to be removed. It has two main operations: push and pop.
+
+Push: This operation adds an element to the top of the stack. It takes the element as input and increases the size of the stack by one.
+
+Pop: This operation removes the top element from the stack and decreases the size of the stack by one. It does not take any input and returns the element that was removed.
+
+A few other primitive operations that can be performed on a stack are:
+
+- Peek: It returns the top element of the stack without removing it.
+- IsEmpty: It checks whether the stack is empty or not. It returns a boolean value, true if the stack is empty, and false otherwise.
+- Size: It returns the number of elements currently in the stack.
+
+It's worth mentioning that some stack implementation may have more operations or variations of the above operations.
+
+It's important to note that underflow and overflow are common issues when working with stacks. Underflow occurs when trying to pop an element from an empty stack, while overflow occurs when trying to push an element into a stack that has reached its maximum capacity.
+
+## Stack as an abstract data type
+
+A stack is an abstract data type that defines the behavior of a stack without specifying the implementation details. An abstract data type (ADT) defines a set of operations that can be performed on a data structure, along with the mathematical properties and constraints that those operations must satisfy.
+
+The stack ADT typically includes the following basic operations:
+
+- push(element): which adds an element to the top of the stack.
+- pop(): which removes and returns the top element from the stack.
+- peek(): which returns the top element of the stack without removing it.
+- is_empty(): which checks whether the stack is empty or not.
+- size(): which returns the number of elements currently in the stack.
+
+The ADT defines the interface of the stack and allows for different concrete implementations of the same abstract data type, each with its own trade-offs in terms of time and space complexity.
+
+For example, a stack can be implemented using an array or a linked list. Both implementations will have the same behavior from the user's perspective but will have different performance and memory characteristics.
+
+It's also worth mentioning that some stack implementations may have more operations or variations of the above operations.
+
+The ADT of stack is useful for understanding the concepts, and for implementing the stack in different languages and platforms.
+
+## Introduction to queues
+
+A queue is a linear data structure that follows the First In First Out (FIFO) principle. In other words, the first element added to the queue is the first one to be removed. It has two main operations: enqueue and dequeue.
+
+Enqueue: This operation adds an element to the rear of the queue. It takes the element as input and increases the size of the queue by one.
+
+Dequeue: This operation removes the front element from the queue and decreases the size of the queue by one. It does not take any input and returns the element that was removed.
+
+A few other primitive operations that can be performed on a queue are:
+
+- Peek: It returns the front element of the queue without removing it.
+- IsEmpty: It checks whether the queue is empty or not. It returns a boolean value, true if the queue is empty, and false otherwise.
+- Size: It returns the number of elements currently in the queue.
+
+It's worth mentioning that some queue implementation may have more operations or variations of the above operations.
+
+It's important to note that underflow and overflow are common issues when working with queues. Underflow occurs when trying to dequeue an element from an empty queue, while overflow occurs when trying to enqueue an element into a queue that has reached its maximum capacity.
+
+Queues are often used in computer science and programming for scheduling and resource management, such as in CPU scheduling, disk scheduling, and managing communications between devices.
+
+## Primitive operation on the queues
+
+A queue is a linear data structure that follows the First In First Out (FIFO) principle. There are several primitive operations that can be performed on a queue, including:
+
+- Enqueue: This operation adds an element to the rear of the queue. It takes the element as input and increases the size of the queue by one.
+- Dequeue: This operation removes the front element from the queue and decreases the size of the queue by one. It does not take any input and returns the element that was removed.
+- Peek: This operation returns the front element of the queue without removing it.
+- Is_empty: This operation checks whether the queue is empty or not. It returns a boolean value, true if the queue is empty, and false otherwise.
+- Size: This operation returns the number of elements currently in the queue.
+
+Some queue implementations may have more operations or variations of the above operations, for example,
+
+- Clear: This operation removes all the elements from the queue.
+- Contains: This operation checks whether a specific element is present in the queue or not.
+- Index_of: This operation returns the index of a specific element in the queue.
+
+It's important to note that underflow and overflow are common issues when working with queues. Underflow occurs when trying to dequeue an element from an empty queue, while overflow occurs when trying to enqueue an element into a queue that has reached its maximum capacity.
+
+In most programming languages, Queue can be used by importing a library or a module.
+
+## Queues as an abstract data type
+
+A queue is an abstract data type that defines the behavior of a queue without specifying the implementation details. An abstract data type (ADT) defines a set of operations that can be performed on a data structure, along with the mathematical properties and constraints that those operations must satisfy.
+
+The queue ADT typically includes the following basic operations:
+
+- enqueue(element): which adds an element to the rear of the queue.
+- dequeue(): which removes and returns the front element from the queue.
+- peek(): which returns the front element of the queue without removing it.
+- is_empty(): which checks whether the queue is empty or not.
+- size(): which returns the number of elements currently in the queue.
+
+The ADT defines the interface of the queue and allows for different concrete implementations of the same abstract data type, each with its own trade-offs in terms of time and space complexity.
+
+For example, a queue can be implemented using an array, a linked list, or a circular buffer. Both implementations will have the same behavior from the user's perspective but will have different performance and memory characteristics.
+
+It's also worth mentioning that some queue implementations may have more operations or variations of the above operations.
+
+The ADT of queue is useful for understanding the concepts, and for implementing the queue in different languages and platforms.
+
+## Circular Queue
+
+A circular queue is a type of queue in which the last position is connected to the first position to make a circular link. This allows for the reuse of the memory space once the last position is reached and the queue is full.
+
+In a circular queue, the enqueue operation works in the same way as a regular queue, by adding an element to the rear of the queue. However, the dequeue operation is slightly different. When the front of the queue reaches the last position, instead of removing the front element, it wraps around to the first position and continues to remove the next element.
+
+One of the main advantages of a circular queue is that it can prevent overflow by reusing the memory space. When the rear of the queue reaches the last position and there is no more memory available, it wraps around to the first position and starts overwriting the oldest elements.
+
+A circular queue can be implemented using an array or a linked list. The array-based implementation is more memory efficient but has a fixed size, while the linked list-based implementation is more flexible but requires more memory.
+
+In addition to the basic operations, some circular queue implementations may have additional functionalities such as checking if the queue is full or not.
+
+It's worth mentioning that Circular queue is also known as "Circular Buffer" and "Ring Buffer".
+
+## Dequeue
+
+Dequeue, also known as a double-ended queue, is a linear data structure that allows elements to be added or removed from either end. It combines the features of both stacks and queues and supports the following operations:
+
+- Enqueue_front: This operation adds an element to the front of the dequeue.
+- Enqueue_rear: This operation adds an element to the rear of the dequeue.
+- Dequeue_front: This operation removes and returns the front element of the dequeue.
+- Dequeue_rear: This operation removes and returns the rear element of the dequeue.
+- Peek_front: This operation returns the front element of the dequeue without removing it.
+- Peek_rear: This operation returns the rear element of the dequeue without removing it.
+- Is_empty: This operation checks whether the dequeue is empty or not. It returns a boolean value, true if the dequeue is empty, and false otherwise.
+- Size: This operation returns the number of elements currently in the dequeue.
+
+A dequeue can be implemented using an array, a linked list, or a circular buffer. The array-based implementation is more memory efficient but has a fixed size, while the linked list-based implementation is more flexible but requires more memory.
+
+Dequeues are useful in situations where elements need to be added or removed from both ends, such as in scheduling algorithms, web browsers (where elements are added and removed from both ends of the history), and image processing.
+
+## Priority queues
+
+A priority queue is a special type of queue in which each element has a priority associated with it. Elements with higher priority are dequeued before elements with lower priority.
+
+There are two main ways to implement a priority queue:
+
+- Using a data structure such as a heap (binary heap, fibonacci heap, etc)
+- Using an ordered list, where each element is inserted in the right position according to its priority.
+
+Priority Queue can be implemented as a:
+
+- Max priority queue : where the element with the highest priority is at the front
+- Min priority queue : where the element with the lowest priority is at the front
+
+The basic operations that can be performed on a priority queue are:
+
+- Insert(element, priority): which adds an element to the queue with a given priority
+- Delete(): which removes and returns the element with the highest priority
+- Peek(): which returns the element with the highest priority without removing it.
+- Is_empty(): which checks whether the queue is empty or not.
+- Size(): which returns the number of elements currently in the queue.
+
+Priority queues are used in a wide range of applications, such as scheduling, graph algorithms, and simulations. They are also used to implement other data structures such as heapsort and Dijkstra's shortest path algorithm.</pre>
+  </body>
+</html>
+
+<pre style="color:#33ff33">
+</pre>
