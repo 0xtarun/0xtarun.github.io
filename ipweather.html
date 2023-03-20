@@ -75,7 +75,7 @@
 			<p id="hourly-humidity-pal"></p>
 			<p id="hourly-wind-speed-pal"></p>
 		</div>
-		
+
 	</div>
 
 	<script>
@@ -89,9 +89,9 @@
 				const currentWeather = data.current_weather;
 				const hourlyWeather = data.hourly;
 
-				document.getElementById('time-pal').innerHTML = 'Current Time: ' + currentWeather.time;
+				document.getElementById('time-pal').innerHTML = 'Current Date and Time: ' + palestineTime;
 				document.getElementById('current-temp-pal').innerHTML = 'Temperature: ' + currentWeather.temperature + ' °C';
-				document.getElementById('hourly-humidity-pal').innerHTML = 'Humidity: ' +hourlyWeather.relativehumidity_2m[0] + '%';
+				document.getElementById('hourly-humidity-pal').innerHTML = 'Humidity: ' + hourlyWeather.relativehumidity_2m[0] + '%';
 				document.getElementById('hourly-wind-speed-pal').innerHTML = 'Wind Speed: ' + hourlyWeather.windspeed_10m[0] + ' m/s';
 			});
 		// India
@@ -101,11 +101,17 @@
 				const currentWeather = data.current_weather;
 				const hourlyWeather = data.hourly;
 
-				document.getElementById('time-ind').innerHTML = 'Current Time: ' + currentWeather.time;
+				document.getElementById('time-ind').innerHTML = 'Current Date and Time: ' + indiaTime;
 				document.getElementById('current-temp-ind').innerHTML = 'Temperature: ' + currentWeather.temperature + ' °C';
 				document.getElementById('hourly-humidity-ind').innerHTML = 'Humidity: ' + hourlyWeather.relativehumidity_2m[0] + '%';
 				document.getElementById('hourly-wind-speed-ind').innerHTML = 'Wind Speed: ' + hourlyWeather.windspeed_10m[0] + ' m/s';
 			});
-		</script>
+	</script>
+	<script>
+		var indiaTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+		var palestineTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Gaza" });
+		
+	</script>
 </body>
+
 </html>
