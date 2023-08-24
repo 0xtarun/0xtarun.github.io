@@ -17,6 +17,14 @@
             color: darkgray;
             /* Text color */
         }
+        #submitBtn{
+            background-color: black;
+            color: white;
+        }
+        #numberInput{
+            background-color: darkgray;
+            color: black;
+        }
     </style>
 </head>
 
@@ -40,12 +48,15 @@
                 document.getElementById("result").textContent = `${answer} is the #. It took you ${guesses} guesses.`;
             }
             else if (guess < answer) {
-                document.getElementById("result").textContent = `too small`;
+                document.getElementById("result").textContent = ` Wrong  (hint : #>${guess})`;
+                
             }
             else {
-                document.getElementById("result").textContent = `too big`;
+                document.getElementById("result").textContent = ` Wrong  (hint : #<${guess})`;
             }
+            ;
         }
+        
 
     </script>
 </body>
