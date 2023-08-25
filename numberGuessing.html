@@ -33,9 +33,7 @@
     <p>Pick a number between 1 to 10</p>
     <h2>Guess : #</h2>
     <label>Enter the number : </label>
-    <input type="range" id="numberInput" name="numberInput" min="0" max="10" step="1" value="0">
-    <output for="numberInput" id="selectedValue">0</output>
-    /*<input type="text" id="numberInput">*/
+    <input type="text" id="numberInput">
     <input type="submit" id="submitBtn"><br>
     <br>
     <label type="text" id="result">#??</label>
@@ -60,15 +58,6 @@
         }
         
 
-    </script>
-    <script>
-        /*/ JavaScript to display the selected value in real-time*/
-        const numberInput = document.getElementById("numberInput");
-        const selectedValue = document.getElementById("selectedValue");
-
-        numberInput.addEventListener("input", function() {
-            selectedValue.textContent = numberInput.value;
-        });
     </script>
 </body>
 
