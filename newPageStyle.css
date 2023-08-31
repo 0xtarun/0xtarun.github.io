@@ -1,0 +1,24 @@
+body {
+    color : #00FF73;
+    background-color: #000000;
+    font-family : "consolas",sans-serif;
+}
+h1 {
+    color : #FFFFFF;
+    font-family :"Press Start 2p" , "consolas" , sans-serif;
+}
+p {
+    color : #00FF73;
+    font-family : "consolas",sans-serif;
+}
+ul {
+    list-style-type : none;
+}
+
+a {
+    text-decoration:none ;
+    color : #00FF73;
+}
+a:hover {
+    color : green;
+}
