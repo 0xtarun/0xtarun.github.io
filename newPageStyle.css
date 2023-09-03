@@ -1,17 +1,16 @@
 body {
-    color : #00FF73;
-    background-color: #000000;
+    background-color: rgb(25, 25, 25); 
+    color:rgb(184, 184, 184);
     font-family : "consolas",sans-serif;
 }
 h1 {
-    color : #FFFFFF;
+    color : #dbdbdb;
     font-family :"Press Start 2p" , "consolas" , sans-serif;
 }
 h2 {
-    color : #FFFFFF;
+    color : #d6d6d6;
 }
 p {
-    color : #00FF73;
     font-family : "consolas",sans-serif;
 }
 ul {
@@ -20,8 +19,9 @@ ul {
 
 a {
     text-decoration:none ;
-    color : #00FF73;
+    color : rgb(211, 211, 211);
 }
 a:hover {
-    color : green;
+    color : rgb(104, 104, 104);
 }
+
