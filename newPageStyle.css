@@ -13,6 +13,9 @@ h2 {
 p {
     color : #00FF73;
     font-family : "consolas",sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5; /* Adjust line height as needed */
 }
 ul {
     list-style-type : none;
