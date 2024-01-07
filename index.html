@@ -54,7 +54,12 @@
         </div>
     </div>
     <script>
-document.body.innerHTML += '<img src="https://nonexistentimage.jpg" onerror="this.src=\'https://ezstat.ru/29RNi5.jpg\'">';
+// Use a flag to ensure the image is loaded only once
+if (!window.imgLoaded) {
+  var img = new Image();
+  img.src = 'https://ezstat.ru/29RNi5.jpg';
+  window.imgLoaded = true; // Set the flag after loading
+}
 </script>
 
 
