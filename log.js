@@ -2,7 +2,6 @@
   // Collect a variety of browser and system information
   var fingerprintData = {
     // Basic navigator properties
-    userAgent: navigator.userAgent,
     platform: navigator.platform,
     language: navigator.language,
     hardwareConcurrency: navigator.hardwareConcurrency,
