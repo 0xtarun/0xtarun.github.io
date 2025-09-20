@@ -19,16 +19,30 @@
       "Dutch Government",
       "Ministry of Defence UK"
     ],
-    "education": [
-      {
-        "credential": "Bachelor of Computer Applications (BCA)",
-        "completed": 2024
-      },
-      {
-        "credential": "Google Cybersecurity Professional Certificate",
-        "issuer": "Google via Coursera"
-      }
-    ]
+    "education": {
+    	"degree": [
+    	{
+        	"credential": "Bachelor of Computer Applications (BCA)",
+        	"completed": 2024
+      	},
+      	{
+      		"credential": "BSC CyberSecurity",
+      		"completed": 2027
+      	}
+        ],
+    	"certification": [
+    	{
+        	"credential": "Google Cybersecurity Professional Certificate",
+        	"issuer": "Google via Coursera",
+        	"for": "Completing course"
+        },
+        {
+        	"credential": "Geeks For Geeks Acknowledgement Certificate",
+        	"issuer": "GeeksForGeeks",
+        	"for": "Bug Hunting"
+        }
+        ]
+    }
   },
   "interests": {
     "reading": [
