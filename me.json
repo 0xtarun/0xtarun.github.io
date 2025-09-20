@@ -1,0 +1,48 @@
+{
+  "name": "Tarun Anand",
+  "age": 21,
+  "location": "India",
+  "bio": "web hacker and coder with a strong background in cybersecurity. I specialize in finding and securing vulnerabilities, with a particular focus on web applications. My work has been recognized by organizations including NASA, the UK Government, the Dutch Government, and the Ministry of Defence UK.",
+  "education": {
+    "degree": "BCA (Bachelor of Computer Applications)",
+    "year": 2024,
+    "google_cybersecurity_professional_certificate": {
+      "issuer": "Google",
+      "platform": "Coursera",
+      "description": "Certificate for entry-level cybersecurity roles, covering network security, risk management, and threat analysis."
+    }
+  },
+  "technical_skills": {
+    "cybersecurity_focus": [
+      "Web hacking",
+      "Bug bounty hunting",
+      "Vulnerability analysis (SQLi ,XSS, IDOR, business logic flaws)",
+      "Reconnaissance"
+    ],
+    "development_and_research": [
+      "Scripting and tool development",
+      "Security research"
+    ]
+  },
+  "recognized_by": [
+    "NASA",
+    "UK Government",
+    "Dutch Government",
+    "Ministry of Defence UK",
+    "Other programs"
+  ],
+  "hobbies_and_entertainment": {
+    "reading_genres": [
+      "Philosophy",
+      "Psychology",
+      "Spirituality",
+      "Manga",
+      "Novels"
+    ],
+    "media": [
+      "Web shows",
+      "Anime"
+    ]
+  },
+  "current_focus": "Actively pursuing bug bounty hunting to further enhance my skills and expertise in identifying and responsibly disclosing vulnerabilities."
+}
