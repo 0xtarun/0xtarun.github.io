@@ -1,8 +1,10 @@
 {
   "personal": {
     "name": "Tarun Anand",
-    "age": 21,
-    "location": "India",
+    "alias": [
+      "okakx",
+      "0xtarun"
+    ],
     "bio": "A cybersecurity professional specializing in web hacking and tool development with a focus on bug bounty hunting."
   },
   "professional": {
