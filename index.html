@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url="https://0xtarun.neocities.org">
-  <title>Redirecting...</title>
-  <link rel="canonical" href="https://0xtarun.neocities.org">
-  <script>
-    window.location.replace("https://0xtarun.neocities.org");
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcone To My Page</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        #markdown-content { display: none; } /* Hide the raw markdown */
+        #html-output { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; }
+    </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, follow this <a href="https://0xtarun.neocities.org">link</a>.</p>
+    <div id="html-output"></div>
+
+    <div id="markdown-content">
+# Tarun's Website
+## Interests : 
+- Reading Books - **Philosophical, Psychological, Spiritual** and many other.
+- Learning **Web Security** and **Hacking**.
+- Writting **simple tools** and **scripts** to automate stuffs.
+- Watching **Web Shows** and **Animes**.
+## Socials :
+- [Telegram](https://t.me/okakx)
+- [Instagram](https://instagram.com/okakx)
+- [X / Twitter](https://x.com/awkened_other)
+
+> **Note:** This page is written in **Markdown** 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        // Get the markdown text from the hidden div
+        const markdownText = document.getElementById('markdown-content').innerHTML;
+
+        // Use the marked.parse() function to convert it to HTML
+        const htmlText = marked.parse(markdownText);
+
+        // Put the generated HTML into the output div so the browser can display it
+        document.getElementById('html-output').innerHTML = htmlText;
+    </script>
+
 </body>
 </html>
