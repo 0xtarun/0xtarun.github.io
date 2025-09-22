@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcone To My Page</title>
+    <style>
+        body{
+            background-image:url(https://cdn.pixabay.com/photo/2017/05/04/17/17/night-sky-2284594_960_720.jpg);
+            color:white;
+            background-size:cover;
+            background-attachment:fixed;
+            }
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        #markdown-content { display: none; } /* Hide the raw markdown */
+        #html-output { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; }
+        a { color:lightgray; }
+    </style>
+</head>
+<body style="display:flex;justify-content:center;align-items:center;padding:10%">
+    <div style="width:70hv; height:auto;" id="html-output"></div>
+
+    <div id="markdown-content">
+# Tarun's Website
+## Interests : 
+- Reading Books - **Philosophical, Psychological, Spiritual** and many other.
+- Learning **Web Security** and **Hacking**.
+- Writting **simple tools** and **scripts** to automate stuffs.
+- Watching **Web Shows** and **Animes**.
+## Socials :
+- [Telegram](https://t.me/okakx)
+- [Instagram](https://instagram.com/okakx)
+- [X / Twitter](https://x.com/awkened_other)
+
+> **Note:** This page is written in **Markdown** 
+    </div>
+
+    <script src="marked.min.js"></script>
+
+    <script>
+        // Get the markdown text from the hidden div
+        const markdownText = document.getElementById('markdown-content').innerHTML;
+
+        // Use the marked.parse() function to convert it to HTML
+        const htmlText = marked.parse(markdownText);
+
+        // Put the generated HTML into the output div so the browser can display it
+        document.getElementById('html-output').innerHTML = htmlText;
+    </script>
+
+</body>
+</html>
