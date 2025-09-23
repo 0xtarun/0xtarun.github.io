@@ -1,0 +1,6 @@
+https://0xtarun.neocities.org
+https://0xtarun.neocities.org/marked.min.js
+https://0xtarun.neocities.org/'+e+'
+https://0xtarun.neocities.org/$%7Be%7D
+https://0xtarun.neocities.org/style.css
+flag needs an argument: -fr

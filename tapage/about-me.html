@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcone To My Page</title>
+    <style>
+        /* The issue with background-attachment: fixed is it causes a flicker on mobile browsers. */
+        /* To fix this, we'll create a fixed-position background container instead. */
+        /* This container will sit behind the main content and will not re-render on scroll. */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(night-sky.jpg);
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Pushes the background behind everything else */
+        }
+        
+        body {
+            /* We remove the background properties from the body since they are now in the container */
+            color:white;
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding-top: 10%;
+            padding-bottom:10%;
+            padding-left:5%;
+            padding-right:5%;
+            /* Make sure the body has a high enough z-index or is relative to render on top of the background */
+            position: relative;
+            z-index: 1;
+            /* We still want to center the content */
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        #markdown-content { display: none; } /* Hide the raw markdown */
+        
+        #html-output {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            /* Give the output a transparent background so the new fixed background can show through */
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; }
+        a { color:lightgray; }
+
+        /* The width property in the original div was incorrect (70hv), it should be 70vw or a percentage. */
+        /* To maintain the original intent, we'll use a percentage width. */
+        #html-output {
+            width: 90%;
+            max-width: 700px; /* To prevent it from becoming too wide on large screens */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-container"></div> 
+
+    <div id="html-output"></div>
+
+    <div id="markdown-content">
+[Back](index.html)
+### Tarun Anand aka 0xtarun 
+#### An Independent Vulnerability *Researcher*.
+## Interests : 
+- Reading Books - **Philosophical, Psychological, Spiritual** and many other.
+- Learning **Web Security** and **Hacking**.
+- Writting **simple tools** and **scripts** to automate stuffs.
+- Watching **Web Shows** and **Animes**.
+
+> **Note:** Written in **Markdown** 
+</div>
+
+    <script src="marked.min.js"></script>
+
+    <script>
+        // Get the markdown text from the hidden div
+        const markdownText = document.getElementById('markdown-content').innerHTML;
+
+        // Use the marked.parse() function to convert it to HTML
+        const htmlText = marked.parse(markdownText);
+
+        // Put the generated HTML into the output div so the browser can display it
+        document.getElementById('html-output').innerHTML = htmlText;
+    </script>
+
+</body>
+</html>

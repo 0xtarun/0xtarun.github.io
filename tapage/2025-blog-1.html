@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcone To My Page</title>
+    <style>
+        /* The issue with background-attachment: fixed is it causes a flicker on mobile browsers. */
+        /* To fix this, we'll create a fixed-position background container instead. */
+        /* This container will sit behind the main content and will not re-render on scroll. */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(../night-sky.jpg);
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Pushes the background behind everything else */
+        }
+        
+        body {
+            /* We remove the background properties from the body since they are now in the container */
+            color:white;
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding-top: 10%;
+            padding-bottom:10%;
+            padding-left:5%;
+            padding-right:5%;
+            /* Make sure the body has a high enough z-index or is relative to render on top of the background */
+            position: relative;
+            z-index: 1;
+            /* We still want to center the content */
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        #markdown-content { display: none; } /* Hide the raw markdown */
+        
+        #html-output {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            /* Give the output a transparent background so the new fixed background can show through */
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; }
+        a { color:lightgray; }
+
+        /* The width property in the original div was incorrect (70hv), it should be 70vw or a percentage. */
+        /* To maintain the original intent, we'll use a percentage width. */
+        #html-output {
+            width: 90%;
+            max-width: 700px; /* To prevent it from becoming too wide on large screens */
+        }
+        img {
+          width:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-container"></div> 
+
+    <div id="html-output"></div>
+
+    <div id="markdown-content">
+[Back](../blogs.html)-------------[Home-Page](../index.html)
+# Episode-1-How I hacked NASA
+So , it was end of 2023, month december , I was just scrolling here and there and maybe on some instagram page or twitter , i don't really remember, few people were claiming to find bugs in NASA and getting a appreciation letter for it, so my background was mostly doing hacking for fun till now, like defacing wild websites of different countries , just poking here and there, and finding cool looking glitches and bugs on instagram. so I thought , let's get this letter, it was really looking so good . Moreover when i was kid i claimed that i hacked NASA to my friends and in return i was made fun of, haha, so I thought , let's do it , now i can really say that I did hacked it and responsibly reported it them. My main focus was getting that letter of appreciation but after spending one months on different assets of NASA, I still couldn't find any bugs , I was really spending so much time on researching , then in first few weeks Jan 2024 , I started getting few bugs that i thought to have security impacts but they refused to acknowledge , even though it has clearly having , like in few i was able to kick people out of thier session remotely, like it was some web app by NASA, so if someone was using it , I could just make that person log out remotelly , without any contact with the device. But anyway i moved on from hunting these kind of bugs and moved to finding bugs which were popular , so I choosed XSS , and SQLi and then in end of Jan. I got my first bug triaged on NASA, it was XSS, but then i waited for it to be fixed , but I think it was medium impact bug so they don't have it on priority. but I was impatience about getting that appreciation letter. so this time , i just wanted a critical bug quickly, and in third month , end of Feb maybe, I got it too and this bug got fixed quickly as it was of critical one. And I got the letter within 10 days of reporting ,it was really nice feeling getting that letter , more nice was getting that critical bug that I got, I was really excited in that moment, my heart was racing, haha. After this day , i keep getting more and more bugs on NASA, only few of those i reported, as i was lazy to write reports again and again. Done writting about it for now. I hope you are doing good other side of screen.
+
+![letter of apprecitation](../letterofappriciation.jpg)
+
+> **Note:** Written in **Markdown** 
+</div>
+
+    <script src="../marked.min.js"></script>
+
+    <script>
+        // Get the markdown text from the hidden div
+        const markdownText = document.getElementById('markdown-content').innerHTML;
+
+        // Use the marked.parse() function to convert it to HTML
+        const htmlText = marked.parse(markdownText);
+
+        // Put the generated HTML into the output div so the browser can display it
+        document.getElementById('html-output').innerHTML = htmlText;
+    </script>
+
+</body>
+</html>
