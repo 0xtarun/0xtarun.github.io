@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encoder/Decoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        textarea, input {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            background-color: #1a1a1a; /* Dark grayish black */
+            color: #fff;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+        textarea {
+            height: 150px; /* Ensure textareas are the same height as before */
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #333; /* Dark gray */
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555; /* Slightly lighter gray on hover */
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Encoder/Decoder</h1>
+    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+    <input type="text" id="cipherKey" placeholder="Enter your cipher key">
+    <button onclick="encodeText()">Encode</button>
+    <button onclick="decodeText()">Decode</button>
+    <button onclick="clearFields()">Clear</button>
+    <p>Output:</p>
+    <textarea id="outputText" readonly></textarea>
+
+    <script>
+        // Function to encode text
+        function encodeText() {
+            const inputText = document.getElementById("inputText").value;
+            const cipherKey = document.getElementById("cipherKey").value;
+
+            if (cipherKey.length === 0) {
+                alert("Please enter a cipher key!");
+                return;
+            }
+
+            let encodedText = '';
+            for (let i = 0; i < inputText.length; i++) {
+                const charCode = inputText.charCodeAt(i);
+                const keyChar = cipherKey.charCodeAt(i % cipherKey.length);
+                encodedText += String.fromCharCode(charCode + keyChar);
+            }
+
+            // Convert encoded text to base64
+            const encodedBase64 = btoa(unescape(encodeURIComponent(encodedText)));
+            document.getElementById("outputText").value = encodedBase64;
+        }
+
+        // Function to decode text
+        function decodeText() {
+            const encodedBase64 = document.getElementById("inputText").value;
+            const cipherKey = document.getElementById("cipherKey").value;
+
+            if (cipherKey.length === 0) {
+                alert("Please enter a cipher key!");
+                return;
+            }
+
+            // Decode base64 to get the encoded text
+            const encodedText = decodeURIComponent(escape(atob(encodedBase64)));
+
+            let decodedText = '';
+            for (let i = 0; i < encodedText.length; i++) {
+                const charCode = encodedText.charCodeAt(i);
+                const keyChar = cipherKey.charCodeAt(i % cipherKey.length);
+                decodedText += String.fromCharCode(charCode - keyChar);
+            }
+
+            document.getElementById("outputText").value = decodedText;
+        }
+
+        // Function to clear all fields
+        function clearFields() {
+            document.getElementById("inputText").value = '';
+            document.getElementById("cipherKey").value = '';
+            document.getElementById("outputText").value = '';
+        }
+    </script>
+</body>
+</html>
